@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>srishti store</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial,  sans-serif;
+        }
+        nav{
+          display: flex; 
+          justify-content: space-between;
+align-items: center;
+color:white;
+
+background: teal;
+padding: 15px 50px;
+position:sticky;
+top:0;
+z-index:1000;
+        }
+        nav h2{
+            font-size: 36px;
+        }
+            nav ul{
+               display: flex; 
+               list-style: none;
+               gap:40px;
+            }
+            nav ul li{
+                cursor: pointer;
+                transition: 0.3s;
+            } 
+            nav ul li:hover{
+color:gold;
+            }
+        .hero{
+            display: flex;
+            background: linear-gradient(135deg, #667eea,#764ba2);
+            justify-content: space-between;
+            align-items: center;
+            padding: 80px 50px;
+            min-height: 90dvh;
+        }
+        .hero-text{ 
+            width:50%;
+        }
+        .hero-text h1{
+            font-size: 50px;
+            color:white;
+        }
+        .hero-text p{
+            font-size: 20px;
+            margin: 20px 0;
+            color:#f1f1f1;
+        }
+        .hero-text button{ 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            background: #1e3a8a;
+            color:white;
+
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .hero-text button:hover{
+            background: #4f46e5;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+.hero-image{
+    width: 50%;
+    text-align: center;
+}
+.hero-image img{
+    width:450px;
+}
+.products{
+    padding: 80px 50px;
+    text-align: center;
+}
+.products h2{
+    font-size: 40px;
+    color: #1e3a8a;
+    margin-bottom: 40px;
+}
+.product-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.card{
+    width:280px;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+.card:hover{
+    transform: translateY(-10px) scale(1.05);
+    
+}
+.card img{
+    width:100%;
+    border-radius: 10px;
+}
+.card h3{
+    margin: 15px 0;
+}
+.card p{
+    font-size: 20px;
+    color:green;
+    margin-bottom: 15px;
+}
+.card button{
+    background: #1e3a8a;
+    color:white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.card button:hover{
+    background: #4f46e5;
+}
+.categories{
+    padding:80px 50px;
+    text-align: center;
+    background: #f8f9fa;
+}
+.categories h2{
+    font-size: 40px;
+    color:#1e3a8a;
+    margin-bottom: 40px;
+}
+.category-container{
+    display: flex;
+    justify-content: center;
+    gap:25px;
+    flex-wrap: wrap;
+}
+.category-card{
+    width:220px;
+    padding:30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: 0.3s;
+    cursor: pointer;
+}
+.category-card:hover{
+    transform: translateY(-10px);
+    background: #1e3a8a;
+    color:white;
+}
+.reviws{
+    padding:80px 50px;
+    text-align: center;
+}
+.reviews h2{
+    font-size: 40px;
+    color:#1e3a8a;
+    margin-bottom: 40px;
+}
+.reviews-container{
+    display: flex;
+    justify-content: center;
+    gap:30px;
+    flex-wrap: wrap;
+}
+.review-card{
+    width:300px;
+    background: white;
+    padding:25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+.review-card:hover{
+    transform: translateY(-10px);
+}
+.review-card p{
+margin:15px 0;
+color:gray
+}
+.contact{
+    padding:80px 50px;
+    text-align: center;
+    background: #f8f9fa;
+}
+.contact h2{
+    font-size:40px;
+    color:#1e3a8a;
+    margin-bottom: 30px;
+}
+form{
+    max-width:600px;
+    margin:auto;
+}
+form input,form textarea{
+    width:100%;
+    padding:15px;
+    margin:15px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+form textarea{
+    height:150px;
+    resize:none;
+}
+form button{
+    background: #1e3a8a;
+    color: white;
+    border:none;
+    padding: 15px 30px;
+    border-radius: 8px;
+font-size: 18px;
+cursor: pointer;
+transition: 0.3s;
+}
+form button:hover{
+    background: #4f46e5;
+}
+footer{
+    background: teal;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+}
+.footer{
+    background: #0f4c5c;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+.footer-links{
+    margin:20px 0 ;
+}
+.footer links a{
+    color:white;
+    text-decoration: none;
+    margin:0 15px;
+    transition: 0.3s;
+}
+.footer-links a:hover{
+    color:#ffd700;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h2>Srishti Store</h2>
+            <ul>
+                <li>Home</li>
+                <li>Product</li>
+                <li>Categories</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Welcome to Srishti Store</h1>
+            <p>Discover the latest fashion and amazing products at the best prices</p>
+            <button>Shop Now</button>
+            <div class="hero-image">
+                <img src="shopping.jpg" alt="shopping">
+            </div>
+        </div>
+
+    </section>
+    <section class="products">
+        <h2>Featured products</h2>
+        <div class="product-container">
+            <div class="card">
+                <img src="shoes1.jpg" alt="shoes"> 
+                <h3>Sports Shoes</h3>
+                <p>Rs.1999</p>
+                <button>Buy Now</button>
+            </div>
+            <div class="card">
+                <img src="watch.jpg" alt="smartwatch">
+                <h3>smartwatch</h3>
+                <p>Rs.2999</p>
+                <button>Buy Now</button>
+            </div>
+            <div class="card">
+                <img src="headphone.jpg" alt="headphone">
+                <h3>Headphone</h3>
+                <p> Rs.1499</p>
+                <button>Buy Now</button>
+            </div>
+        </div>
+    </section>
+    <section class="categories">
+        <h2>Shop by category</h2>
+        <div class="category-container">
+            <div class="category-card">
+                <h3>🥿 Shoes</h3>
+            </div>
+            <div class="category-card">
+                <h3>⌚ Watches</h3>
+            </div>
+<div class="category-card">
+   <h3>🎧 Headphones</h3>
+</div>
+<div class="category-card">
+    <h3>👗 Fashion</h3>
+</div>
+        </div>
+    </section>
+<section class="reviews">
+    <h2>What our Customers Say</h2>
+    <div class="review-container">
+        <div class="review-card">
+            <h3>Priya</h3>
+            <p>"Amazing quality and fast delivery!"</p>
+            <h4>⭐⭐⭐⭐⭐</h4>
+        </div>
+        <div class="review-card">
+            <h3>Rahul</h3>
+            <p>"Best shopping experiance. Highly recommended."</p>
+            <h4>⭐⭐⭐⭐⭐</h4>
+        </div>
+        <div class="review-card">
+            <h3>Anjali</h3>
+            <p>"Excellent products at affordable prices</p>
+            <h4>⭐⭐⭐⭐⭐</h4>
+        </div>
+    </div>
+</section>
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p class="contact-text">
+        📩 Email:khushitiwari81145@gmail.com
+    </p>
+<p class="contact-text">
+    💻<a href="https://github.com/khushitiwari81145-jpg" target="_blank">github.com/khushitiwari81145-jpg</a>
+</p>
+    <form>
+        <input type="text" placeholder="Enter Your Name">
+        <input type="email" placeholder="Enter Your Email">
+        <textarea placeholder="Write Your Message"></textarea>
+        <button>Send Message</button>
+    </form>
+</section>
+<footer>
+    <h2>Srishti Store</h2>
+    <p>Your trusted online shopping destination.</p>
+    <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms and Conditons</a>
+        <a href="#">Contacts</a>
+    </div>
+    <p>&copy; 2026 Srishti Store | All Rights Reserved</p>
+</footer>
+</body>
+</html>
